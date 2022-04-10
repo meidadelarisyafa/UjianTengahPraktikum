@@ -1,22 +1,13 @@
-package Praktikum;
-
-import Pemrograman.Hewan;
-
-import java.util.Scanner;
+package Enkapsulasi;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Baju yang tersedia : ");
-        System.out.println("Baju A dengan harga 100000");
-        System.out.println("Baju B dengan harga 125000");
-        System.out.println("Baju C dengan harga 175000");
-        System.out.print("Baju yang akan anda beli bertipe : ");
-        String jenis = input.nextLine();
-        System.out.print("Jumlah Baju yang akan anda beli adalah : ");
-        int jumlah = input.nextInt();
-        Baju baju = new Baju(jenis,jumlah);
-        baju.display();
+        System.out.println();
+        DataMerchant.merch = DataMerchant.tambahMerchant(new Merchant("Bakso Pak Sahid", "Bakso", 8000));
+        DataMerchant.merch = DataMerchant.tambahMerchant(new Merchant("Nasgor Mblebes", "Nasi Goreng Jawa", 10000));
+        DataMerchant.merch = DataMerchant.tambahMerchant(new Merchant("Ayam Geprek Kak Ros", "Ayam Kota Ekstra Nasi", 10000));
+        DataMerchant.tampilData();
+        DataMerchant.merch = DataMerchant.tambahMerchant(new Merchant(DataMerchant.in));
+        DataMerchant.tampilData();
     }
 }
-
